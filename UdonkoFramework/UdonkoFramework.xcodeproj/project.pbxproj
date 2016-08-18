@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		062F59171D3CAE0000F5DD9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062F59161D3CAE0000F5DD9C /* AppDelegate.swift */; };
+		062F59191D3CAE0000F5DD9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062F59181D3CAE0000F5DD9C /* ViewController.swift */; };
+		062F591C1D3CAE0000F5DD9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 062F591A1D3CAE0000F5DD9C /* Main.storyboard */; };
+		062F591E1D3CAE0000F5DD9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062F591D1D3CAE0000F5DD9C /* Assets.xcassets */; };
+		062F59211D3CAE0000F5DD9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 062F591F1D3CAE0000F5DD9C /* LaunchScreen.storyboard */; };
+		062F59261D3CAE0000F5DD9C /* UdonkoFramework WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 062F59251D3CAE0000F5DD9C /* UdonkoFramework WatchKit App.app */; };
+		062F592C1D3CAE0000F5DD9C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 062F592A1D3CAE0000F5DD9C /* Interface.storyboard */; };
+		062F592E1D3CAE0000F5DD9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062F592D1D3CAE0000F5DD9C /* Assets.xcassets */; };
+		062F59351D3CAE0000F5DD9C /* UdonkoFramework WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 062F59341D3CAE0000F5DD9C /* UdonkoFramework WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		062F593C1D3CAE0000F5DD9C /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062F593B1D3CAE0000F5DD9C /* InterfaceController.swift */; };
+		062F593E1D3CAE0000F5DD9C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062F593D1D3CAE0000F5DD9C /* ExtensionDelegate.swift */; };
+		062F59401D3CAE0000F5DD9C /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062F593F1D3CAE0000F5DD9C /* NotificationController.swift */; };
+		062F59421D3CAE0000F5DD9C /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062F59411D3CAE0000F5DD9C /* GlanceController.swift */; };
+		062F59441D3CAE0000F5DD9C /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062F59431D3CAE0000F5DD9C /* ComplicationController.swift */; };
+		062F59461D3CAE0000F5DD9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062F59451D3CAE0000F5DD9C /* Assets.xcassets */; };
+		062F59561D3CB7A700F5DD9C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062F59551D3CB7A700F5DD9C /* HealthKit.framework */; };
+		062F595A1D3CC0C700F5DD9C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062F59591D3CC0C700F5DD9C /* HealthKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		062F59271D3CAE0000F5DD9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 062F590B1D3CADFF00F5DD9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 062F59241D3CAE0000F5DD9C;
+			remoteInfo = "UdonkoFramework WatchKit App";
+		};
+		062F59361D3CAE0000F5DD9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 062F590B1D3CADFF00F5DD9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 062F59331D3CAE0000F5DD9C;
+			remoteInfo = "UdonkoFramework WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		062F594D1D3CAE0000F5DD9C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				062F59351D3CAE0000F5DD9C /* UdonkoFramework WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		062F59511D3CAE0000F5DD9C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				062F59261D3CAE0000F5DD9C /* UdonkoFramework WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		062F59131D3CAE0000F5DD9C /* UdonkoFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UdonkoFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		062F59161D3CAE0000F5DD9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		062F59181D3CAE0000F5DD9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		062F591B1D3CAE0000F5DD9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		062F591D1D3CAE0000F5DD9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		062F59201D3CAE0000F5DD9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		062F59221D3CAE0000F5DD9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		062F59251D3CAE0000F5DD9C /* UdonkoFramework WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UdonkoFramework WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		062F592B1D3CAE0000F5DD9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		062F592D1D3CAE0000F5DD9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		062F592F1D3CAE0000F5DD9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		062F59341D3CAE0000F5DD9C /* UdonkoFramework WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "UdonkoFramework WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		062F593A1D3CAE0000F5DD9C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		062F593B1D3CAE0000F5DD9C /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		062F593D1D3CAE0000F5DD9C /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		062F593F1D3CAE0000F5DD9C /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		062F59411D3CAE0000F5DD9C /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		062F59431D3CAE0000F5DD9C /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		062F59451D3CAE0000F5DD9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		062F59471D3CAE0000F5DD9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		062F59551D3CB7A700F5DD9C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		062F59571D3CB7AF00F5DD9C /* UdonkoFramework WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "UdonkoFramework WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		062F59581D3CC0C700F5DD9C /* UdonkoFramework.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = UdonkoFramework.entitlements; sourceTree = "<group>"; };
+		062F59591D3CC0C700F5DD9C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		062F59101D3CAE0000F5DD9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				062F595A1D3CC0C700F5DD9C /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		062F59311D3CAE0000F5DD9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				062F59561D3CB7A700F5DD9C /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		062F590A1D3CADFF00F5DD9C = {
+			isa = PBXGroup;
+			children = (
+				062F59591D3CC0C700F5DD9C /* HealthKit.framework */,
+				062F59551D3CB7A700F5DD9C /* HealthKit.framework */,
+				062F59151D3CAE0000F5DD9C /* UdonkoFramework */,
+				062F59291D3CAE0000F5DD9C /* UdonkoFramework WatchKit App */,
+				062F59381D3CAE0000F5DD9C /* UdonkoFramework WatchKit Extension */,
+				062F59141D3CAE0000F5DD9C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		062F59141D3CAE0000F5DD9C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				062F59131D3CAE0000F5DD9C /* UdonkoFramework.app */,
+				062F59251D3CAE0000F5DD9C /* UdonkoFramework WatchKit App.app */,
+				062F59341D3CAE0000F5DD9C /* UdonkoFramework WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		062F59151D3CAE0000F5DD9C /* UdonkoFramework */ = {
+			isa = PBXGroup;
+			children = (
+				062F59581D3CC0C700F5DD9C /* UdonkoFramework.entitlements */,
+				062F59161D3CAE0000F5DD9C /* AppDelegate.swift */,
+				062F59181D3CAE0000F5DD9C /* ViewController.swift */,
+				062F591A1D3CAE0000F5DD9C /* Main.storyboard */,
+				062F591D1D3CAE0000F5DD9C /* Assets.xcassets */,
+				062F591F1D3CAE0000F5DD9C /* LaunchScreen.storyboard */,
+				062F59221D3CAE0000F5DD9C /* Info.plist */,
+			);
+			path = UdonkoFramework;
+			sourceTree = "<group>";
+		};
+		062F59291D3CAE0000F5DD9C /* UdonkoFramework WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				062F592A1D3CAE0000F5DD9C /* Interface.storyboard */,
+				062F592D1D3CAE0000F5DD9C /* Assets.xcassets */,
+				062F592F1D3CAE0000F5DD9C /* Info.plist */,
+			);
+			path = "UdonkoFramework WatchKit App";
+			sourceTree = "<group>";
+		};
+		062F59381D3CAE0000F5DD9C /* UdonkoFramework WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				062F59571D3CB7AF00F5DD9C /* UdonkoFramework WatchKit Extension.entitlements */,
+				062F593B1D3CAE0000F5DD9C /* InterfaceController.swift */,
+				062F593D1D3CAE0000F5DD9C /* ExtensionDelegate.swift */,
+				062F593F1D3CAE0000F5DD9C /* NotificationController.swift */,
+				062F59411D3CAE0000F5DD9C /* GlanceController.swift */,
+				062F59431D3CAE0000F5DD9C /* ComplicationController.swift */,
+				062F59451D3CAE0000F5DD9C /* Assets.xcassets */,
+				062F59471D3CAE0000F5DD9C /* Info.plist */,
+				062F59391D3CAE0000F5DD9C /* Supporting Files */,
+			);
+			path = "UdonkoFramework WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		062F59391D3CAE0000F5DD9C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				062F593A1D3CAE0000F5DD9C /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		062F59121D3CAE0000F5DD9C /* UdonkoFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 062F59521D3CAE0000F5DD9C /* Build configuration list for PBXNativeTarget "UdonkoFramework" */;
+			buildPhases = (
+				062F590F1D3CAE0000F5DD9C /* Sources */,
+				062F59101D3CAE0000F5DD9C /* Frameworks */,
+				062F59111D3CAE0000F5DD9C /* Resources */,
+				062F59511D3CAE0000F5DD9C /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				062F59281D3CAE0000F5DD9C /* PBXTargetDependency */,
+			);
+			name = UdonkoFramework;
+			productName = UdonkoFramework;
+			productReference = 062F59131D3CAE0000F5DD9C /* UdonkoFramework.app */;
+			productType = "com.apple.product-type.application";
+		};
+		062F59241D3CAE0000F5DD9C /* UdonkoFramework WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 062F594E1D3CAE0000F5DD9C /* Build configuration list for PBXNativeTarget "UdonkoFramework WatchKit App" */;
+			buildPhases = (
+				062F59231D3CAE0000F5DD9C /* Resources */,
+				062F594D1D3CAE0000F5DD9C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				062F59371D3CAE0000F5DD9C /* PBXTargetDependency */,
+			);
+			name = "UdonkoFramework WatchKit App";
+			productName = "UdonkoFramework WatchKit App";
+			productReference = 062F59251D3CAE0000F5DD9C /* UdonkoFramework WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		062F59331D3CAE0000F5DD9C /* UdonkoFramework WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 062F594A1D3CAE0000F5DD9C /* Build configuration list for PBXNativeTarget "UdonkoFramework WatchKit Extension" */;
+			buildPhases = (
+				062F59301D3CAE0000F5DD9C /* Sources */,
+				062F59311D3CAE0000F5DD9C /* Frameworks */,
+				062F59321D3CAE0000F5DD9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UdonkoFramework WatchKit Extension";
+			productName = "UdonkoFramework WatchKit Extension";
+			productReference = 062F59341D3CAE0000F5DD9C /* UdonkoFramework WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		062F590B1D3CADFF00F5DD9C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = UDONKONET;
+				TargetAttributes = {
+					062F59121D3CAE0000F5DD9C = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7JKB5AMAKP;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
+					};
+					062F59241D3CAE0000F5DD9C = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7JKB5AMAKP;
+					};
+					062F59331D3CAE0000F5DD9C = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7JKB5AMAKP;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 062F590E1D3CADFF00F5DD9C /* Build configuration list for PBXProject "UdonkoFramework" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 062F590A1D3CADFF00F5DD9C;
+			productRefGroup = 062F59141D3CAE0000F5DD9C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				062F59121D3CAE0000F5DD9C /* UdonkoFramework */,
+				062F59241D3CAE0000F5DD9C /* UdonkoFramework WatchKit App */,
+				062F59331D3CAE0000F5DD9C /* UdonkoFramework WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		062F59111D3CAE0000F5DD9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				062F59211D3CAE0000F5DD9C /* LaunchScreen.storyboard in Resources */,
+				062F591E1D3CAE0000F5DD9C /* Assets.xcassets in Resources */,
+				062F591C1D3CAE0000F5DD9C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		062F59231D3CAE0000F5DD9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				062F592E1D3CAE0000F5DD9C /* Assets.xcassets in Resources */,
+				062F592C1D3CAE0000F5DD9C /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		062F59321D3CAE0000F5DD9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				062F59461D3CAE0000F5DD9C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		062F590F1D3CAE0000F5DD9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				062F59191D3CAE0000F5DD9C /* ViewController.swift in Sources */,
+				062F59171D3CAE0000F5DD9C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		062F59301D3CAE0000F5DD9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				062F59401D3CAE0000F5DD9C /* NotificationController.swift in Sources */,
+				062F593E1D3CAE0000F5DD9C /* ExtensionDelegate.swift in Sources */,
+				062F59441D3CAE0000F5DD9C /* ComplicationController.swift in Sources */,
+				062F593C1D3CAE0000F5DD9C /* InterfaceController.swift in Sources */,
+				062F59421D3CAE0000F5DD9C /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		062F59281D3CAE0000F5DD9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 062F59241D3CAE0000F5DD9C /* UdonkoFramework WatchKit App */;
+			targetProxy = 062F59271D3CAE0000F5DD9C /* PBXContainerItemProxy */;
+		};
+		062F59371D3CAE0000F5DD9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 062F59331D3CAE0000F5DD9C /* UdonkoFramework WatchKit Extension */;
+			targetProxy = 062F59361D3CAE0000F5DD9C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		062F591A1D3CAE0000F5DD9C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				062F591B1D3CAE0000F5DD9C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		062F591F1D3CAE0000F5DD9C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				062F59201D3CAE0000F5DD9C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		062F592A1D3CAE0000F5DD9C /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				062F592B1D3CAE0000F5DD9C /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		062F59481D3CAE0000F5DD9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: HIDEHIKO KONDO (RKVXEJV6P7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: HIDEHIKO KONDO (RKVXEJV6P7)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "071c5fd5-7dde-46f8-a43b-21200935a951";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		062F59491D3CAE0000F5DD9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: HIDEHIKO KONDO (RKVXEJV6P7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: HIDEHIKO KONDO (RKVXEJV6P7)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "071c5fd5-7dde-46f8-a43b-21200935a951";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		062F594B1D3CAE0000F5DD9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "UdonkoFramework WatchKit Extension/UdonkoFramework WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: HIDEHIKO KONDO (RKVXEJV6P7)";
+				INFOPLIST_FILE = "UdonkoFramework WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.udonko.UdonkoFramework.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "071c5fd5-7dde-46f8-a43b-21200935a951";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		062F594C1D3CAE0000F5DD9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "UdonkoFramework WatchKit Extension/UdonkoFramework WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: HIDEHIKO KONDO (RKVXEJV6P7)";
+				INFOPLIST_FILE = "UdonkoFramework WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.udonko.UdonkoFramework.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "071c5fd5-7dde-46f8-a43b-21200935a951";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		062F594F1D3CAE0000F5DD9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = UdonkoFramework_WatchKit_Extension;
+				INFOPLIST_FILE = "UdonkoFramework WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = net.udonko.UdonkoFramework.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		062F59501D3CAE0000F5DD9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = UdonkoFramework_WatchKit_Extension;
+				INFOPLIST_FILE = "UdonkoFramework WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = net.udonko.UdonkoFramework.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		062F59531D3CAE0000F5DD9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UdonkoFramework/UdonkoFramework.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = UdonkoFramework/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.udonko.UdonkoFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		062F59541D3CAE0000F5DD9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UdonkoFramework/UdonkoFramework.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = UdonkoFramework/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.udonko.UdonkoFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		062F590E1D3CADFF00F5DD9C /* Build configuration list for PBXProject "UdonkoFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				062F59481D3CAE0000F5DD9C /* Debug */,
+				062F59491D3CAE0000F5DD9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		062F594A1D3CAE0000F5DD9C /* Build configuration list for PBXNativeTarget "UdonkoFramework WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				062F594B1D3CAE0000F5DD9C /* Debug */,
+				062F594C1D3CAE0000F5DD9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		062F594E1D3CAE0000F5DD9C /* Build configuration list for PBXNativeTarget "UdonkoFramework WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				062F594F1D3CAE0000F5DD9C /* Debug */,
+				062F59501D3CAE0000F5DD9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		062F59521D3CAE0000F5DD9C /* Build configuration list for PBXNativeTarget "UdonkoFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				062F59531D3CAE0000F5DD9C /* Debug */,
+				062F59541D3CAE0000F5DD9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 062F590B1D3CADFF00F5DD9C /* Project object */;
+}
