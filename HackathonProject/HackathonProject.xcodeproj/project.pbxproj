@@ -22,6 +22,8 @@
 		06FF1A211EC84F45009B6712 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FF1A201EC84F45009B6712 /* NotificationController.m */; };
 		06FF1A241EC84F45009B6712 /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FF1A231EC84F45009B6712 /* ComplicationController.m */; };
 		06FF1A261EC84F45009B6712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06FF1A251EC84F45009B6712 /* Assets.xcassets */; };
+		06FF1A361EC84FBE009B6712 /* MaBeeeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FF1A351EC84FBE009B6712 /* MaBeeeSDK.framework */; };
+		06FF1A371EC84FBE009B6712 /* MaBeeeSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06FF1A351EC84FBE009B6712 /* MaBeeeSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,17 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		06FF1A381EC84FBE009B6712 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				06FF1A371EC84FBE009B6712 /* MaBeeeSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +106,7 @@
 		06FF1A231EC84F45009B6712 /* ComplicationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplicationController.m; sourceTree = "<group>"; };
 		06FF1A251EC84F45009B6712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06FF1A271EC84F45009B6712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06FF1A351EC84FBE009B6712 /* MaBeeeSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MaBeeeSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06FF1A361EC84FBE009B6712 /* MaBeeeSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +131,7 @@
 		06FF19E31EC84F44009B6712 = {
 			isa = PBXGroup;
 			children = (
+				06FF1A351EC84FBE009B6712 /* MaBeeeSDK.framework */,
 				06FF19EE1EC84F44009B6712 /* HackathonProject */,
 				06FF1A071EC84F44009B6712 /* HackathonProject WatchKit App */,
 				06FF1A161EC84F45009B6712 /* HackathonProject WatchKit Extension */,
@@ -204,6 +220,7 @@
 				06FF19E91EC84F44009B6712 /* Frameworks */,
 				06FF19EA1EC84F44009B6712 /* Resources */,
 				06FF1A311EC84F45009B6712 /* Embed Watch Content */,
+				06FF1A381EC84FBE009B6712 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -549,6 +566,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7JKB5AMAKP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HackathonProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.udonko.HackathonProject;
@@ -561,6 +582,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7JKB5AMAKP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HackathonProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.udonko.HackathonProject;
