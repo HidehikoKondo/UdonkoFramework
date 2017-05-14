@@ -26,6 +26,8 @@
 		06FF1A371EC84FBE009B6712 /* MaBeeeSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06FF1A351EC84FBE009B6712 /* MaBeeeSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		06FF1A3A1EC853D6009B6712 /* MEMELib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FF1A391EC853D6009B6712 /* MEMELib.framework */; };
 		06FF1A3B1EC853D6009B6712 /* MEMELib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06FF1A391EC853D6009B6712 /* MEMELib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		06FF1A3E1EC8B5B4009B6712 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FF1A3D1EC8B5B4009B6712 /* AVFoundation.framework */; };
+		06FF1A401EC8B5BF009B6712 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FF1A3F1EC8B5BF009B6712 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 		06FF1A271EC84F45009B6712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06FF1A351EC84FBE009B6712 /* MaBeeeSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MaBeeeSDK.framework; sourceTree = "<group>"; };
 		06FF1A391EC853D6009B6712 /* MEMELib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MEMELib.framework; sourceTree = "<group>"; };
+		06FF1A3D1EC8B5B4009B6712 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		06FF1A3F1EC8B5BF009B6712 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06FF1A401EC8B5BF009B6712 /* AudioToolbox.framework in Frameworks */,
+				06FF1A3E1EC8B5B4009B6712 /* AVFoundation.framework in Frameworks */,
 				06FF1A3A1EC853D6009B6712 /* MEMELib.framework in Frameworks */,
 				06FF1A361EC84FBE009B6712 /* MaBeeeSDK.framework in Frameworks */,
 			);
@@ -142,6 +148,7 @@
 				06FF1A071EC84F44009B6712 /* HackathonProject WatchKit App */,
 				06FF1A161EC84F45009B6712 /* HackathonProject WatchKit Extension */,
 				06FF19ED1EC84F44009B6712 /* Products */,
+				06FF1A3C1EC8B5B4009B6712 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -215,6 +222,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		06FF1A3C1EC8B5B4009B6712 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06FF1A3F1EC8B5BF009B6712 /* AudioToolbox.framework */,
+				06FF1A3D1EC8B5B4009B6712 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -285,6 +301,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 7JKB5AMAKP;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					06FF1A021EC84F44009B6712 = {
 						CreatedOnToolsVersion = 8.2.1;
