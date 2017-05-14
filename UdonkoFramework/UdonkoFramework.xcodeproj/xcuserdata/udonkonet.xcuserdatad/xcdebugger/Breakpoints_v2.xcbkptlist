@@ -15,8 +15,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
             endingLineNumber = "20"
-            landmarkName = "applicationShouldRequestHealthAuthorization(_:)"
-            landmarkType = "5">
+            landmarkName = "applicationShouldRequestHealthAuthorization(application:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
