@@ -24,6 +24,8 @@
 		06FF1A261EC84F45009B6712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06FF1A251EC84F45009B6712 /* Assets.xcassets */; };
 		06FF1A361EC84FBE009B6712 /* MaBeeeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FF1A351EC84FBE009B6712 /* MaBeeeSDK.framework */; };
 		06FF1A371EC84FBE009B6712 /* MaBeeeSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06FF1A351EC84FBE009B6712 /* MaBeeeSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		06FF1A3A1EC853D6009B6712 /* MEMELib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FF1A391EC853D6009B6712 /* MEMELib.framework */; };
+		06FF1A3B1EC853D6009B6712 /* MEMELib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06FF1A391EC853D6009B6712 /* MEMELib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				06FF1A3B1EC853D6009B6712 /* MEMELib.framework in Embed Frameworks */,
 				06FF1A371EC84FBE009B6712 /* MaBeeeSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -107,6 +110,7 @@
 		06FF1A251EC84F45009B6712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06FF1A271EC84F45009B6712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06FF1A351EC84FBE009B6712 /* MaBeeeSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MaBeeeSDK.framework; sourceTree = "<group>"; };
+		06FF1A391EC853D6009B6712 /* MEMELib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MEMELib.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06FF1A3A1EC853D6009B6712 /* MEMELib.framework in Frameworks */,
 				06FF1A361EC84FBE009B6712 /* MaBeeeSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +136,7 @@
 		06FF19E31EC84F44009B6712 = {
 			isa = PBXGroup;
 			children = (
+				06FF1A391EC853D6009B6712 /* MEMELib.framework */,
 				06FF1A351EC84FBE009B6712 /* MaBeeeSDK.framework */,
 				06FF19EE1EC84F44009B6712 /* HackathonProject */,
 				06FF1A071EC84F44009B6712 /* HackathonProject WatchKit App */,
@@ -566,6 +572,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7JKB5AMAKP;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -582,6 +589,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7JKB5AMAKP;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
