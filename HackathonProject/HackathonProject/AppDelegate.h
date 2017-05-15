@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <MEMELib/MEMELib.h>
-
+#import <WatchKit/WatchKit.h>
+#import <WatchConnectivity/WatchConnectivity.h>
 
 //MEMEの設定
 #define APPCLIENDID @"392782397631375"
@@ -44,7 +45,7 @@
 
 
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, WCSessionDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

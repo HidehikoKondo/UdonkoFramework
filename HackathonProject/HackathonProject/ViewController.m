@@ -61,6 +61,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
+
 #pragma -mark JINS MEME用
 # pragma mark MEME接続関連
 //MEMEのスキャン開始（点滅状態のMEMEを探す）

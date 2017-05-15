@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import <WatchConnectivity/WatchConnectivity.h>
 
 //MEME
 #import <MEMELib/MEMELib.h>
 
 
 
-@interface ViewController : UIViewController<MEMELibDelegate, UIApplicationDelegate, AVAudioPlayerDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface ViewController : UIViewController<MEMELibDelegate, UIApplicationDelegate, AVAudioPlayerDelegate, UITableViewDataSource, UITableViewDelegate, WCSessionDelegate>
 
 
 @end

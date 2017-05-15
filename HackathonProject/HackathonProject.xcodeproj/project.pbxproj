@@ -28,6 +28,8 @@
 		06FF1A3B1EC853D6009B6712 /* MEMELib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06FF1A391EC853D6009B6712 /* MEMELib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		06FF1A3E1EC8B5B4009B6712 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FF1A3D1EC8B5B4009B6712 /* AVFoundation.framework */; };
 		06FF1A401EC8B5BF009B6712 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FF1A3F1EC8B5BF009B6712 /* AudioToolbox.framework */; };
+		9A749D4B1EC97777001A6BAD /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A749D491EC97777001A6BAD /* WatchConnectivity.framework */; };
+		9A749D4C1EC97777001A6BAD /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A749D4A1EC97777001A6BAD /* WatchKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,8 @@
 		06FF1A391EC853D6009B6712 /* MEMELib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MEMELib.framework; sourceTree = "<group>"; };
 		06FF1A3D1EC8B5B4009B6712 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		06FF1A3F1EC8B5BF009B6712 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		9A749D491EC97777001A6BAD /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		9A749D4A1EC97777001A6BAD /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A749D4B1EC97777001A6BAD /* WatchConnectivity.framework in Frameworks */,
+				9A749D4C1EC97777001A6BAD /* WatchKit.framework in Frameworks */,
 				06FF1A401EC8B5BF009B6712 /* AudioToolbox.framework in Frameworks */,
 				06FF1A3E1EC8B5B4009B6712 /* AVFoundation.framework in Frameworks */,
 				06FF1A3A1EC853D6009B6712 /* MEMELib.framework in Frameworks */,
@@ -225,6 +231,8 @@
 		06FF1A3C1EC8B5B4009B6712 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A749D491EC97777001A6BAD /* WatchConnectivity.framework */,
+				9A749D4A1EC97777001A6BAD /* WatchKit.framework */,
 				06FF1A3F1EC8B5BF009B6712 /* AudioToolbox.framework */,
 				06FF1A3D1EC8B5B4009B6712 /* AVFoundation.framework */,
 			);
@@ -641,6 +649,7 @@
 				06FF1A2C1EC84F45009B6712 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06FF1A2E1EC84F45009B6712 /* Build configuration list for PBXNativeTarget "HackathonProject WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -649,6 +658,7 @@
 				06FF1A301EC84F45009B6712 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06FF1A321EC84F45009B6712 /* Build configuration list for PBXNativeTarget "HackathonProject" */ = {
 			isa = XCConfigurationList;
@@ -657,6 +667,7 @@
 				06FF1A341EC84F45009B6712 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

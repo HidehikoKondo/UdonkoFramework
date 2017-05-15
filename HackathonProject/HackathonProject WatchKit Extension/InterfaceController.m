@@ -44,10 +44,41 @@
                                                  id text = [results objectAtIndex:0];
                                                  //入力した文字列をラベルに表示
                                                  [_textLabel setText:(NSString*)text];
+                                                 
+                                                 //iPhoneに送信
+                                                 [self submit:text];
                                              }
                                          }
      ];
 }
+
+
+
+-(void)submit:(NSString *)message{
+    NSDictionary *applicationDict = @{@"message" : message};
+    [[WCSession defaultSession] updateApplicationContext:applicationDict error:nil];
+    
+    
+    if ([[WCSession defaultSession] isReachable]) {
+        [[WCSession defaultSession] sendMessage:applicationDict
+                                   replyHandler:^(NSDictionary *replyHandler) {
+                                       // do something
+                                       NSLog(@"送った/ %@",message);
+                                   }
+                                   errorHandler:^(NSError *error) {
+                                       // do something
+                                       NSLog(@"送れなかった・・・orz");
+                                   }
+         ];
+    }else{
+        NSLog(@"つながってないよ");
+        [_textLabel setText:@"つながってないよ"];
+    }
+}
+
+
+
+
 
 @end
 
