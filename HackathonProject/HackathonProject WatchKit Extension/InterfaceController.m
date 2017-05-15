@@ -10,6 +10,7 @@
 
 
 @interface InterfaceController()
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *textLabel;
 
 @end
 
@@ -30,6 +31,22 @@
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
+}
+
+- (IBAction)textInput {
+    NSArray* suggestions = @[@"こんにちは",@"ハロー",@"グーテンモルゲン"];
+    
+    [self presentTextInputControllerWithSuggestions:suggestions
+                                   allowedInputMode:WKTextInputModeAllowEmoji
+                                         completion:^(NSArray *results){
+                                             if (results && results.count > 0) {
+                                                 //入力した文字の取り出し
+                                                 id text = [results objectAtIndex:0];
+                                                 //入力した文字列をラベルに表示
+                                                 [_textLabel setText:(NSString*)text];
+                                             }
+                                         }
+     ];
 }
 
 @end
