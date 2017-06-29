@@ -9,9 +9,6 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import <MEMELib/MEMELib.h>
-#import <AudioToolbox/AudioToolbox.h>
-#include <AVFoundation/AVFoundation.h>
-
 @import MaBeeeSDK;
 
 @interface ViewController ()
@@ -26,39 +23,21 @@
 @property (weak, nonatomic) IBOutlet UITableView *memeSelectTableView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 @property (weak, nonatomic) IBOutlet UITextView *statusText;
-@property (weak, nonatomic) IBOutlet UITextView *mabeeestatusText;
+
 
 @property MEMERealTimeData *latestRealTimeData;
 
 
-@property (weak, nonatomic) IBOutlet UISlider *powerSlider;
-@property (weak, nonatomic) IBOutlet UILabel *distanseLabel;
-
-@property (weak, nonatomic) IBOutlet UIButton *alermStopButton;
 
 @end
 
 
 @implementation ViewController
 
-//効果音
-SystemSoundID sound_1;
-
-//タイマー
-NSTimer *tutorialTimer1;
-
-
-int m_rssi = 0;
-
-//フラグ
-bool updateflg = NO;
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    
     
     //delegate
     //これを実行するとmemeAppAuthorizedが呼ばれる
@@ -71,40 +50,9 @@ bool updateflg = NO;
     
     //端末のスリープを無効にする
     [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
-    
-    
-    //効果音ファイル読み込み
-    NSError *error = nil;
-    // 再生する audio ファイルのパスを取得
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"alerm" ofType:@"aif"];
-    // パスから、再生するURLを作成する
-    NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
-    // auido を再生するプレイヤーを作成する
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-    // エラーが起きたとき
-    if ( error != nil )
-    {
-        NSLog(@"Error %@", [error localizedDescription]);
-    }
-    // 自分自身をデリゲートに設定
-    [self.audioPlayer setDelegate:self];
-    self.audioPlayer.numberOfLoops = -1;
-    
 
     
-    
 
-}
-
-//Mabeee delegate
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    [MaBeeeApp.instance addObserver:self selector:@selector(receiveNotification:)];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [MaBeeeApp.instance removeObserver:self];
 }
 
 
@@ -436,126 +384,15 @@ bool updateflg = NO;
     [vc show:self];
 }
 
-
-
-//アラーム停止
--(IBAction)button:(id)sender{
-    [self.audioPlayer stop];
-    
-    //タイマー停止
-    [tutorialTimer1 invalidate];
-    tutorialTimer1 = nil;
-    
-    //モーター停止
-    for (MaBeeeDevice *device in MaBeeeApp.instance.devices) {
-        device.pwmDuty = 0;
-    }
-}
-
 - (IBAction)sliderValueChanged:(UISlider *)slider {
     for (MaBeeeDevice *device in MaBeeeApp.instance.devices) {
         device.pwmDuty = (int)(slider.value * 100);
-        NSLog(@"%d",(int)(slider.value * 100));
     }
 }
 
 
-//ステータス取f得
-- (void)statusUpdate{
-    NSLog(@"UPDATE!!");
-    for (MaBeeeDevice *device in MaBeeeApp.instance.devices) {
-        [device updateRssi];
-        //[device updateBatteryVoltage];
-    }
-    
-
-}
-
-- (IBAction)updateButtonPressed:(UIButton *)sender {
-    [self playSE];
-
-    AVSpeechSynthesizer* speechSynthesizer = [[AVSpeechSynthesizer alloc] init];
-    //NSString* speakingText = message;
-    AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:@"車を追いかけてください"];
-    [speechSynthesizer speakUtterance:utterance];
-    
-    
-    
-    
-    if (updateflg == true){
-        NSLog(@"タイマー停止");
-        updateflg = false;
-        [tutorialTimer1 invalidate];
-        tutorialTimer1 = nil;
-    }else{
-        NSLog(@"タイマー開始");
-        updateflg = true;
-
-        tutorialTimer1 = [NSTimer scheduledTimerWithTimeInterval: 0.5f
-                                                          target: self
-                                                        selector: @selector(statusUpdate)
-                                                        userInfo: nil
-                                                         repeats: YES];
-        
-    }
-}
 
 
-- (void)receiveNotification:(NSNotification *)notification {
-    if ([MaBeeeDeviceRssiDidUpdateNotification isEqualToString:notification.name]) {
-        NSUInteger identifier = [notification.userInfo[@"MaBeeeDeviceIdentifier"] unsignedIntegerValue];
-        MaBeeeDevice *device = [MaBeeeApp.instance deviceWithIdentifier:identifier];
-        NSString *line = [NSString stringWithFormat:@"%d", device.rssi];
-        [self appendLine:line];
-        
-        int rssi = device.rssi;
-
-        if(rssi < -70){
-            //スピート0
-            for (MaBeeeDevice *device in MaBeeeApp.instance.devices) {
-                device.pwmDuty = 0;
-                NSLog(@"%d",(int)device.pwmDuty);
-                [_alermStopButton setEnabled:NO];
-                
-                AVSpeechSynthesizer* speechSynthesizer = [[AVSpeechSynthesizer alloc] init];
-                //NSString* speakingText = message;
-                AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:@"アラームは止められません"];
-                [speechSynthesizer speakUtterance:utterance];
-            }
-        }else{
-            //スピードマックス
-            for (MaBeeeDevice *device in MaBeeeApp.instance.devices) {
-                device.pwmDuty = 50;
-                NSLog(@"%d",(int)device.pwmDuty);
-                [_alermStopButton setEnabled:YES];
-                
-                AVSpeechSynthesizer* speechSynthesizer = [[AVSpeechSynthesizer alloc] init];
-                //NSString* speakingText = message;
-                AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:@"アラームは止められます"];
-                [speechSynthesizer speakUtterance:utterance];
-
-            }
-        }
-        return;
-    }
-    
-//    if ([MaBeeeDeviceBatteryVoltageDidUpdateNotification isEqualToString:notification.name]) {
-//        NSUInteger identifier = [notification.userInfo[@"MaBeeeDeviceIdentifier"] unsignedIntegerValue];
-//        MaBeeeDevice *device = [MaBeeeApp.instance deviceWithIdentifier:identifier];
-//        NSString *line = [NSString stringWithFormat:@"%@ Volgate: %f", device.name, device.batteryVoltage];
-//        [self appendLine:line];
-//        return;
-//    }
-}
-
-- (void)appendLine:(NSString *)line {
-    self.distanseLabel.text = [NSString stringWithFormat:@"🚗接近値：%@\n", line];
-}
-
-
-- (void)playSE{
-    [self.audioPlayer play];
-}
 
 
 
