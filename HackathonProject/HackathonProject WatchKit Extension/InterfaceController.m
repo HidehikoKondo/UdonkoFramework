@@ -21,13 +21,6 @@
     [super awakeWithContext:context];
 
     // Configure interface objects here.
-    
-    if ([WCSession isSupported]) {
-        WCSession *session = [WCSession defaultSession];
-        session.delegate = self;
-        [session activateSession];
-    }
-
 }
 
 - (void)willActivate {
